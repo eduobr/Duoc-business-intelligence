@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "CUBO_CAFE", "CUBO_CAFE\CUBO_CAFE.dwproj", "{ECE914AB-A9B3-47AD-96B3-E3A38A0FA6C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECE914AB-A9B3-47AD-96B3-E3A38A0FA6C4}.Development|Default.ActiveCfg = Development
+		{ECE914AB-A9B3-47AD-96B3-E3A38A0FA6C4}.Development|Default.Build.0 = Development
+		{ECE914AB-A9B3-47AD-96B3-E3A38A0FA6C4}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

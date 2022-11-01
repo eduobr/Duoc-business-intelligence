@@ -1,0 +1,307 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="2f96ab53-0e35-428d-981a-6ef43a974db5" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>HECHOS VENTA</ID>
+  <Name>HECHOS VENTA</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="1d0cbce5-1dae-4c36-9a5e-71f7c8ceee96">
+    <DataSourceViewID>DW VENTA CAFE</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="61a59396-fd22-4436-adfa-20a0ec7a34f0">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="5ac90d96-4bb2-48ff-bd43-bcbc9db95c0d">
+      <ID>RUT</ID>
+      <Name>RUT</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c139cf10-e451-42a3-8032-2cf24689fe07">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="77af2917-3c5a-4fe3-816a-d849d5d69868">
+            <TableID>dbo_HECHOS_VENTA</TableID>
+            <ColumnID>RUT</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="63b97239-c730-4696-b9e5-4382f11f88b7">
+          <AttributeID>TOTAL VENTA</AttributeID>
+          <Name>TOTAL VENTA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="094ddf36-767f-41ff-8040-2d2bbe07b685">
+          <AttributeID>DIM CLIENTE - RUT</AttributeID>
+          <Name>DIM CLIENTE - RUT</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="85528988-f9a7-4c97-a796-93c9ea17e45f">
+          <AttributeID>CODIGO</AttributeID>
+          <Name>CODIGO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2bdc8a0a-5599-479d-82ce-c06cb177cb63">
+          <AttributeID>SUCURSAL ID</AttributeID>
+          <Name>SUCURSAL ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d26a41de-96ed-4a34-a300-44c43e837d0a">
+          <AttributeID>Fecha</AttributeID>
+          <Name>Fecha</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="90c4a76f-0458-42f9-a8cc-e417cb2cbce5">
+      <ID>TOTAL VENTA</ID>
+      <Name>TOTAL VENTA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2c879d2b-bb04-4d25-a420-e2a0556b93c8">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ae1a5989-ba1a-4c23-81cd-e2de594a0307">
+            <TableID>dbo_HECHOS_VENTA</TableID>
+            <ColumnID>TOTAL_x0020_VENTA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0dbabd24-b550-4fe8-9cc0-bfd88f8ff2ad">
+      <ID>DIM CLIENTE - RUT</ID>
+      <Name>DIM CLIENTE - RUT</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="45ed15d1-990a-43b0-a783-31fdc2369239">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="40fa6874-d5ef-4689-8539-0b1f8f84c438">
+            <TableID>dbo_DIM_CLIENTE</TableID>
+            <ColumnID>RUT</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="ca968138-5ce5-481a-b87f-5f9a98932072">
+          <AttributeID>Nombre</AttributeID>
+          <Name>Nombre</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2b4a9361-b4da-4828-9ece-668ce560e71f">
+          <AttributeID>Apellido</AttributeID>
+          <Name>Apellido</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2213e23d-025f-41ce-b58e-18abf94a058f">
+          <AttributeID>Estado Civil</AttributeID>
+          <Name>Estado Civil</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="cb751950-39ee-45ed-bb36-fee8f5333cbe">
+          <AttributeID>Cantidad De Hijos</AttributeID>
+          <Name>Cantidad De Hijos</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cf42d6ec-84a6-4a37-afad-a3cf4e3b56c2">
+      <ID>Nombre</ID>
+      <Name>Nombre</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e68e01fb-ba37-4fa5-a8c0-65890954e100">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5ced290d-2723-4136-9560-1f7b2e19778a">
+            <TableID>dbo_DIM_CLIENTE</TableID>
+            <ColumnID>Nombre</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3566989e-d947-4ead-853e-0ccf13593e11">
+      <ID>Apellido</ID>
+      <Name>Apellido</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6528140c-b288-44d6-b113-fb7b28900dd2">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="01c7e25b-6ce7-48f1-be7c-eb2a750aaeaa">
+            <TableID>dbo_DIM_CLIENTE</TableID>
+            <ColumnID>Apellido</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="14fa54d3-b6e2-4676-aaee-f96083d21a30">
+      <ID>Estado Civil</ID>
+      <Name>Estado Civil</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c96a93bf-45f9-407d-bb89-89c9d2820bf4">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f2d91821-772f-4050-aecf-20746e458cde">
+            <TableID>dbo_DIM_CLIENTE</TableID>
+            <ColumnID>Estado_x0020_Civil</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d9bc4bcb-c698-4cda-8d29-84ee9ec03ca5">
+      <ID>Cantidad De Hijos</ID>
+      <Name>Cantidad De Hijos</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fa697c97-5a6d-4943-9156-dc626e6c2e0e">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="91503db8-5758-4750-aff9-9e3e3269231c">
+            <TableID>dbo_DIM_CLIENTE</TableID>
+            <ColumnID>Cantidad_x0020_de_x0020_Hijos</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="80834b69-5158-471c-8884-59ed30ff69b3">
+      <ID>CODIGO</ID>
+      <Name>CODIGO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="74b7ce0e-f074-483d-9b9e-da089bbeeab5">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bca47669-40cb-4098-babb-3aa304507e97">
+            <TableID>dbo_DIM_PRODUCTO</TableID>
+            <ColumnID>CODIGO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="44c50122-a677-402d-96f9-335bfdef2df4">
+      <ID>SUCURSAL ID</ID>
+      <Name>SUCURSAL ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cf8b2b3d-1e4b-4111-bc17-5ca44c9871bb">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d95f8ced-cda5-4c77-863b-a638360715da">
+            <TableID>dbo_DIM_SUCURSAL</TableID>
+            <ColumnID>SUCURSAL_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5c36347a-0c29-4561-b975-53938612aff5">
+      <ID>Fecha</ID>
+      <Name>Fecha</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f4e0af46-d38f-4353-9fc0-de9fb626137c">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4e7ec6ed-7311-452d-9f70-86e5416816f9">
+            <TableID>dbo_DIM_TIEMPO</TableID>
+            <ColumnID>fecha</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="581d3bae-cff5-4d49-9f6e-0fc0409f1c3e">
+          <AttributeID>AÑO</AttributeID>
+          <Name>AÑO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="903a3a33-03b7-45cd-adf8-4033bf376355">
+          <AttributeID>MES</AttributeID>
+          <Name>MES</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3686e087-922a-439a-8827-54ed6aa4da0c">
+      <ID>AÑO</ID>
+      <Name>AÑO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ac30dc37-987c-438c-95b7-783de1b450c6">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="32f05040-eb29-4985-a016-41f23a8f4513">
+            <TableID>dbo_DIM_TIEMPO</TableID>
+            <ColumnID>AÑO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="68be66e6-b79a-45a3-9fb4-50544e1c6f17">
+      <ID>MES</ID>
+      <Name>MES</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="49ed3828-4630-48db-8b60-f8ae5fe69c7d">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d2633a12-66b0-4d9b-90e9-cac0548935eb">
+            <TableID>dbo_DIM_TIEMPO</TableID>
+            <ColumnID>MES</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

@@ -1,0 +1,68 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>MI_CUBO_HSUELDO</Database>
+    <Server>LC1301319</Server>
+    <ConnectionString>DataSource=LC1301319;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>3kHqHOHiqqCFEWoZ8D5sMtW8VAQ=16-04-2019 10:50:1816-04-2019 10:50:18</TimeStamp>
+        <ID>
+          <String>DWSUELDOS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>JZ6R+u4nALnhQaDLDPdF29TQrhE=16-04-2019 10:54:4216-04-2019 10:52:42</TimeStamp>
+        <ID>
+          <String>DWSUELDOS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>j0yYT6OPRvvgQJc6ZiyNfKgQUlQ=16-04-2019 10:54:4216-04-2019 10:54:42</TimeStamp>
+        <ID>
+          <String>DMDEPARTAMENTO</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>sDUtmjKRbm67okyelufIUGaAIX8=16-04-2019 10:54:4216-04-2019 10:54:42</TimeStamp>
+        <ID>
+          <String>DMEMPLEADO</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>RCJmC2tFsLDQIv8J7o3ezSiF4Uk=16-04-2019 10:56:1516-04-2019 10:54:42fiBp1PCWK/TGIOlecCkCskONXCE=16-04-2019 10:54:4216-04-2019 10:54:42</TimeStamp>
+        <ID>
+          <String>DWSUELDOS</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>VZ6RqCaBf1t/c3VS6Ml/AtSTDDg=16-04-2019 10:47:0716-04-2019 10:47:07</TimeStamp>
+      <ID>
+        <String>MI_CUBO_HSUELDO</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2019-04-16T13:56:57.116667Z</LastDeployed>
+</DeploymentSnapshot>

@@ -1,0 +1,28 @@
+SELECT de.FirstName+' '+de.LastName,MAX(fr.SalesAmount) FROM DimEmployee de 
+JOIN FactResellerSales fr ON fr.EmployeeKey = de.EmployeeKey
+JOIN FactSalesQuota fs ON de.EmployeeKey = fs.EmployeeKey
+WHERE DepartmentName = 'Sales' AND fr.SalesAmount = (SELECT EmployeeKey,SUM(SalesAmount) from FactResellerSales
+GROUP BY EmployeeKey)
+GROUP BY de.FirstName,de.LastName
+
+SELECT EmployeeKey,SUM(SalesAmount) from FactResellerSales
+GROUP BY EmployeeKey
+
+SELECT fs.SalesQuotaKey,de.FirstName+' '+de.LastName,fs.SalesAmountQuota,fs.Date FROM DimEmployee de 
+JOIN FactResellerSales fr ON fr.EmployeeKey = de.EmployeeKey
+JOIN FactSalesQuota fs ON de.EmployeeKey = fs.EmployeeKey
+WHERE DepartmentName = 'Sales' AND fs.Date <= '2010-12-31' --AND fr.SalesAmount = (SELECT Max(SalesAmount) from FactResellerSales)
+--GROUP BY de.FirstName,de.LastName
+
+SELECT fs.SalesQuotaKey,de.FirstName+' '+de.LastName,fs.SalesAmountQuota,fs.Date FROM DimEmployee de 
+JOIN FactSalesQuota fs ON de.EmployeeKey = fs.EmployeeKey
+WHERE DepartmentName = 'Sales' AND fs.Date <= '2010-12-31' AND MAX(fs.SalesAmountQuota)
+
+
+
+
+SELECT * FROM DimEmployee
+SELECT * FROM FactResellerSales
+SELECT * FROM FactSalesQuota
+
+

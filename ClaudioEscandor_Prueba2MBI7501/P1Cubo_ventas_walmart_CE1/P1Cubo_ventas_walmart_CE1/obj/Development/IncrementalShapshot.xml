@@ -1,0 +1,96 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>P1Cubo_ventas_walmart_CE1</Database>
+    <Server>LC1300729</Server>
+    <ConnectionString>DataSource=LC1300729;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>P00FkdphZK5sCij+AJ7sl4y+C/A=07-06-2019 11:08:0507-06-2019 11:08:05</TimeStamp>
+        <ID>
+          <String>DWINR001D</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>p3ODR+v7WB1448km4mFO2abZwyA=07-06-2019 11:09:2507-06-2019 11:09:25</TimeStamp>
+        <ID>
+          <String>DWINR001D</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>wclUIzheIcrvXNw7jQxMaVV4oro=07-06-2019 11:12:2907-06-2019 11:12:29</TimeStamp>
+        <ID>
+          <String>DMVENDEDOR</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>k1SRoc9mjHcDCsxKhDDYSfmX5FU=07-06-2019 11:12:2907-06-2019 11:12:29</TimeStamp>
+        <ID>
+          <String>DMARTICULO</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>+5ADM4In5g5ZbFAwiYSZQjOyp2I=07-06-2019 11:12:2907-06-2019 11:12:29</TimeStamp>
+        <ID>
+          <String>DMSUCURSAL</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>fW6FgyhXusq4E++5Omp4Pb9Bp9c=07-06-2019 11:12:2907-06-2019 11:12:29</TimeStamp>
+        <ID>
+          <String>DMCLIENTE</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>xXT5R8FA4dKyqN2iHrpd5xnQluE=07-06-2019 11:52:4907-06-2019 11:52:49</TimeStamp>
+        <ID>
+          <String>DimMargenPCTMensual</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>KhkAnBA0Gd5civTPyS/ggCixjr8=07-06-2019 12:17:5507-06-2019 12:17:55</TimeStamp>
+        <ID>
+          <String>DimMontoVentaMensual</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>zcN2K57wZ5dk9RHLiKs09nbLmls=07-06-2019 13:31:3107-06-2019 11:37:21A75oMgBJsY6jrbVt/GiD4SugUAM=07-06-2019 11:37:2107-06-2019 11:37:21</TimeStamp>
+        <ID>
+          <String>CUBO_CL1</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>1vwci6EFbQqd8dDttw4tLQ94jAA=07-06-2019 11:06:0707-06-2019 11:06:06</TimeStamp>
+      <ID>
+        <String>P1Cubo_ventas_walmart_CE1</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2019-06-07T17:31:34.3Z</LastDeployed>
+</DeploymentSnapshot>

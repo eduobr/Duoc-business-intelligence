@@ -1,0 +1,83 @@
+SELECT pe.FirstName+' '+pe.LastName AS 'Nombre Completo', pro.Name AS 'Nombre Producto',
+sa.SalesLastYear AS 'Monto Total', hu.JobTitle AS 'Cargo'
+FROM Person.Person pe
+JOIN Production.Product pro ON pe.BusinessEntityID=pro.ProductID
+JOIN Sales.SalesPerson sa ON pro.ProductID = sa.TerritoryID
+JOIN HumanResources.Employee hu ON sa.BusinessEntityID=hu.BusinessEntityID
+WHERE sa.SalesLastYear IN (SELECT MAX(sa.SalesLastYear) 
+							FROM Person.Person pe
+							JOIN Production.Product pro ON pe.BusinessEntityID=pro.ProductID
+							JOIN Sales.SalesPerson sa ON pro.ProductID = sa.TerritoryID
+							JOIN HumanResources.Employee hu ON sa.BusinessEntityID=hu.BusinessEntityID)
+
+-----
+SELECT pe.FirstName+' '+pe.LastName AS 'Nombre Completo', pro.Name AS 'Nombre Producto',
+MAX(sa.SalesLastYear) AS 'Monto Total', hu.JobTitle AS 'Cargo'
+FROM Person.Person pe
+JOIN Production.Product pro ON pe.BusinessEntityID=pro.ProductID
+JOIN Sales.SalesPerson sa ON pro.ProductID = sa.TerritoryID
+JOIN HumanResources.Employee hu ON sa.BusinessEntityID=hu.BusinessEntityID
+JOIN Sales.SalesOrderHeader sh ON sa.TerritoryID = sa.TerritoryID
+WHERE sa.SalesLastYear IN (SELECT MAX(sa.SalesLastYear) 
+							FROM Person.Person pe
+							JOIN Production.Product pro ON pe.BusinessEntityID=pro.ProductID
+							JOIN Sales.SalesPerson sa ON pro.ProductID = sa.TerritoryID
+							JOIN HumanResources.Employee hu ON sa.BusinessEntityID=hu.BusinessEntityID)
+							AND (DATEPART(yy, sh.OrderDate) = 2011)
+GROUP BY pe.FirstName+' '+pe.LastName, pro.Name, hu.JobTitle
+--------
+SELECT pe.FirstName+' '+pe.LastName AS 'Nombre Completo', pro.Name AS 'Nombre Producto',
+sa.SalesLastYear AS 'Monto Total', hu.JobTitle AS 'Cargo'
+FROM Person.Person pe
+JOIN Production.Product pro ON pe.BusinessEntityID=pro.ProductID
+JOIN Sales.SalesPerson sa ON pro.ProductID = sa.TerritoryID
+JOIN HumanResources.Employee hu ON sa.BusinessEntityID=hu.BusinessEntityID
+WHERE sa.SalesLastYear = (SELECT MAX(sa.SalesLastYear) 
+							FROM Person.Person pe
+							JOIN Production.Product pro ON pe.BusinessEntityID=pro.ProductID
+							JOIN Sales.SalesPerson sa ON pro.ProductID = sa.TerritoryID
+							JOIN HumanResources.Employee hu ON sa.BusinessEntityID=hu.BusinessEntityID) 
+GO 
+
+SELECT * FROM Sales.SalesOrderHeader
+
+SELECT MAX(sa.SalesLastYear),sh.OrderDate
+							FROM Person.Person pe
+							JOIN Production.Product pro ON pe.BusinessEntityID=pro.ProductID
+							JOIN Sales.SalesPerson sa ON pro.ProductID = sa.TerritoryID
+							JOIN HumanResources.Employee hu ON sa.BusinessEntityID=hu.BusinessEntityID
+							JOIN Sales.SalesOrderHeader sh ON sa.TerritoryID = sa.TerritoryID
+							group by sh.OrderDate
+
+SELECT MAX(sa.SalesLastYear),sh.OrderDate,sh.SalesOrderID
+FROM Person.Person pe
+JOIN Production.Product pro ON pe.BusinessEntityID=pro.ProductID
+JOIN Sales.SalesPerson sa ON pro.ProductID = sa.TerritoryID
+JOIN HumanResources.Employee hu ON sa.BusinessEntityID=hu.BusinessEntityID
+JOIN Sales.SalesOrderHeader sh ON sa.TerritoryID = sa.TerritoryID
+WHERE DATEPART(yy, sh.OrderDate) = 2011 
+GROUP BY sh.SalesOrderID,sh.OrderDate
+
+GO
+
+SELECT * FROM Sales.SalesPerson
+
+
+SELECT ROW_NUMBER() OVER (ORDER BY pe.BusinessEntityID) AS IDHVENTAS,pe.BusinessEntityID,sh.SalesOrderID,SH.TotalDue
+FROM Person.Person pe
+JOIN Production.Product pro ON pe.BusinessEntityID=pro.ProductID
+JOIN Sales.SalesPerson sa ON pro.ProductID = sa.TerritoryID
+JOIN Sales.SalesOrderHeader sh ON sa.TerritoryID = sa.TerritoryID
+
+SELECT CAST(ROW_NUMBER() over(order by pe.BusinessEntityID desc) AS INT) AS IDHVENTAS,pe.BusinessEntityID,sh.SalesOrderID,SH.TotalDue
+FROM Person.Person pe
+JOIN Production.Product pro ON pe.BusinessEntityID=pro.ProductID
+JOIN Sales.SalesPerson sa ON pro.ProductID = sa.TerritoryID
+JOIN Sales.SalesOrderHeader sh ON sH.TerritoryID = sa.TerritoryID
+ORDER BY pe.BusinessEntityID DESC
+
+SELECT ROW_NUMBER() OVER (ORDER BY pe.BusinessEntityID) AS IDHVENTAS,pe.BusinessEntityID,sh.SalesOrderID,SH.TotalDue
+FROM Person.Person pe
+JOIN Production.Product pro ON pe.BusinessEntityID=pro.ProductID
+JOIN Sales.SalesPerson sa ON pro.ProductID = sa.TerritoryID
+JOIN Sales.SalesOrderHeader sh ON sa.TerritoryID = sa.TerritoryID

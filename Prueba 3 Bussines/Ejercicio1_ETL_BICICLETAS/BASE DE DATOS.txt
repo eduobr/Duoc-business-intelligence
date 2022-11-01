@@ -1,0 +1,50 @@
+CREATE DATABASE HECHOS 
+GO
+USE HECHOS
+
+CREATE TABLE DIM_VENDEDOR(
+vendedor_id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+nombre VARCHAR NOT NULL,
+apellido VARCHAR NOT NULL,
+ciudad_comuna VARCHAR NOT NULL,
+tipo_capacitacion VARCHAR NOT NULL,
+horas_capactacion INT NOT NULL
+);
+
+
+CREATE TABLE DIM_PRODUCTO(
+codigo_articulo VARCHAR(255) NOT NULL PRIMARY KEY,
+descripcion VARCHAR(255) NULL,
+categoria VARCHAR(255) NULL,
+costo_unitario INT NULL,
+precio_unidatario INT NULL,
+);
+
+
+CREATE TABLE HECHOS_VENTA(
+vendedor_id INT NOT NULL FOREIGN KEY REFERENCES DIM_VENDEDOR(vendedor_id),
+codigo_articulo VARCHAR(255) NOT NULL FOREIGN KEY REFERENCES DIM_PRODUCTO(codigo_articulo),
+annio INT NOT NULL,
+mes VARCHAR NOT NULL,
+dia VARCHAR NOT NULL,
+promedio_ventas MONEY NOT NULL,
+total_ventas MONEY NOT NULL
+);
+
+---------------------------------SQL-ETL-DIM_VENDEDOR---------------------------------------------------------
+
+SELECT        dbo.Vendedores.VENDEDOR_ID, dbo.Vendedores.Nombre, dbo.Vendedores.Apellido, dbo.Sucursales.CIUDAD_COMUNA, dbo.Vendedores.[TIPO_ CAPACITACION], 
+                         dbo.Vendedores.HORAS_CAPACITACION
+FROM            dbo.Sucursales INNER JOIN
+                         dbo.Vendedores ON dbo.Sucursales.SUCURSAL_ID = dbo.Vendedores.SUCURSAL_ID
+
+---------------------------------SQL-ETL-HECHOS_VENTA---------------------------------------------------------
+
+SELECT dbo.Ventas.VENDEDOR_ID, dbo.Detalle_Venta.CODIGO_ARTICULO,  
+CONVERT(VARCHAR,DATENAME(dw,dbo.Ventas.FECHA)) AS "DIA",
+CONVERT(VARCHAR,DATENAME(mm,dbo.Ventas.FECHA)) AS "MES",
+CONVERT(INT,DATENAME(yy,dbo.Ventas.FECHA)) AS "ANNIO", AVG(dbo.Ventas.TOTAL) AS PROMEDIO,
+SUM(dbo.Ventas.TOTAL) AS TOTAL
+FROM dbo.Detalle_Venta 
+INNER JOIN dbo.Ventas ON dbo.Detalle_Venta.DOCUMENTO = dbo.Ventas.DOCUMENTO
+GROUP BY dbo.Ventas.VENDEDOR_ID, dbo.Detalle_Venta.CODIGO_ARTICULO, dbo.Ventas.FECHA

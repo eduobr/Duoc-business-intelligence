@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "MI_CUBO_HSUELDO", "MI_CUBO_HSUELDO\MI_CUBO_HSUELDO.dwproj", "{A44C1252-E3BC-4181-8934-63F91B85F0D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A44C1252-E3BC-4181-8934-63F91B85F0D8}.Development|Default.ActiveCfg = Development
+		{A44C1252-E3BC-4181-8934-63F91B85F0D8}.Development|Default.Build.0 = Development
+		{A44C1252-E3BC-4181-8934-63F91B85F0D8}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

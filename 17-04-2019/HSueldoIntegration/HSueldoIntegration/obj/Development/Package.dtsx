@@ -1,0 +1,1818 @@
+<?xml version="1.0"?>
+<DTS:Executable
+  DTS:refId="Package" xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:CreatorName="LC1300723\LC13007XX"
+  DTS:CreatorComputerName="LC1300723"
+  DTS:CreationDate="4/17/2019 12:49:44 PM"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{4806B8AB-75C7-49FF-B9BA-D9C490E29ED8}"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="13322"
+  DTS:ObjectName="Package"
+  DTS:DTSID="{71CA2E88-DABF-43BE-9F0C-F30A3FB4287C}"
+  DTS:CreationName="SSIS.Package.3">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.AdventureWorks2012.sa]"
+      DTS:ObjectName="LocalHost.AdventureWorks2012.sa"
+      DTS:DTSID="{1D28731D-0755-4426-96B5-FB459A99C8F0}"
+      DTS:CreationName="OLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;User ID=sa;Initial Catalog=AdventureWorks2012;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAtPbT3EM1d0O9tj09eyc8ZgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADvX7AAWJaIMosd9FJqPw6SJqbLQ1cabXHaDaSdkPr5nAAAAAAOgAAAAAIAACAAAADveRp8MvzU3rIQht79IU8VeAM7MlkK8HsxHf27FjWKCiAAAABe3e9ynvEgm9te4aZQaS4oCflZNVbLK6Ib6ndo6RlAi0AAAACSsFX56iYovy7sL6qrA4vB3X48+LpZmDJfbi0cY2OC9uZFc/det3g6sJRyQctgjXgJY130Mri3OAqr6yobVY9F</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.EOH002.sa]"
+      DTS:ObjectName="LocalHost.EOH002.sa"
+      DTS:DTSID="{77DF9125-D431-4C11-BE17-8B42ED4DCC6C}"
+      DTS:CreationName="OLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;User ID=sa;Initial Catalog=EOH002;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAtPbT3EM1d0O9tj09eyc8ZgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAv7I5g5KBXGFh6dFR7glR+sV7S5MUERiBlcvWGXYUjsAAAAAAOgAAAAAIAACAAAACj8yWKZtlOR8o7Zbmmm9H2yr770YJvpy7kAnwd8Ylr4iAAAAAJXixo90PU+5fpsvD2hKLOzwp9YJkwRgSSbr4LJwEQMkAAAAAyVDk3q3wR0+7jX32tAWiVJxyWeEb17mJo4ZYijuQsWU4aIlKU61b9FGY37qM7EIW6CWh+qhIBy0TggOl+nj9G</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Eliminar Departamento"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ThreadHint="0"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Eliminar Departamento"
+      DTS:DTSID="{3E44A4D7-CDEC-42CE-8A7B-9C37480B31CF}"
+      DTS:Description="Execute SQL Task"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{77DF9125-D431-4C11-BE17-8B42ED4DCC6C}"
+          SQLTask:SqlStatementSource="DELETE FROM DMDEPARTAMENTO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Eliminar Empleado"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ThreadHint="1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Eliminar Empleado"
+      DTS:DTSID="{3122311E-4246-4708-B1A9-A5CF5B582144}"
+      DTS:Description="Execute SQL Task"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{77DF9125-D431-4C11-BE17-8B42ED4DCC6C}"
+          SQLTask:SqlStatementSource="DELETE FROM DMEMPLEADO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Eliminar Sueldo"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ThreadHint="0"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Eliminar Sueldo"
+      DTS:DTSID="{28AF431E-B4D2-4A30-8A45-2B01A30B0877}"
+      DTS:Description="Execute SQL Task"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{77DF9125-D431-4C11-BE17-8B42ED4DCC6C}"
+          SQLTask:SqlStatementSource="DELETE FROM HSUELDO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Insertar Departamento"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Insertar Departamento"
+      DTS:DTSID="{0C6249B5-69DA-4007-80B2-ED96A8C4CF77}"
+      DTS:Description="Data Flow Task"
+      DTS:CreationName="SSIS.Pipeline.3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Insertar Departamento\OLE DB Destination"
+              name="OLE DB Destination"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              description="OLE DB Destination"
+              usesDispositions="true"
+              version="4"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset.">[dbo].[DMDEPARTAMENTO]</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  typeConverter="AccessMode">3</property>
+                <property
+                  name="FastLoadKeepIdentity"
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  name="FastLoadKeepNulls"
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  name="FastLoadOptions"
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on.">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  name="FastLoadMaxInsertCommitSize"
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on.">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Insertar Departamento\OLE DB Destination.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.EOH002.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.EOH002.sa]" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Insertar Departamento\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="OLE DB Destination Input"
+                  hasSideEffects="true"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insertar Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GroupName]"
+                      lineageId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Output].Columns[GroupName]"
+                      externalMetadataColumnId="Package\Insertar Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GroupName]"
+                      cachedName="GroupName"
+                      cachedDataType="wstr"
+                      cachedLength="50" />
+                    <inputColumn
+                      refId="Package\Insertar Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DepartmentID]"
+                      lineageId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Output].Columns[DepartmentID]"
+                      externalMetadataColumnId="Package\Insertar Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idDepartamento]"
+                      cachedName="DepartmentID"
+                      cachedDataType="i2" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Insertar Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idDepartamento]"
+                      name="idDepartamento"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GroupName]"
+                      name="GroupName"
+                      dataType="wstr"
+                      length="255" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Insertar Departamento\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  name="OLE DB Destination Error Output"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\Insertar Departamento\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insertar Departamento\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Insertar Departamento\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insertar Departamento\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Insertar Departamento\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insertar Departamento\OLE DB Source"
+              name="OLE DB Source"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              description="OLE DB Source"
+              usesDispositions="true"
+              version="7"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset.">[HumanResources].[Department]</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="SqlCommandVariable"
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  typeConverter="AccessMode">0</property>
+                <property
+                  name="ParameterMapping"
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Insertar Departamento\OLE DB Source.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.AdventureWorks2012.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.AdventureWorks2012.sa]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Output].Columns[DepartmentID]"
+                      name="DepartmentID"
+                      lineageId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Output].Columns[DepartmentID]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DepartmentID]" />
+                    <outputColumn
+                      refId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Output].Columns[Name]"
+                      name="Name"
+                      lineageId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Output].Columns[Name]"
+                      length="50"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Name]" />
+                    <outputColumn
+                      refId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Output].Columns[GroupName]"
+                      name="GroupName"
+                      lineageId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Output].Columns[GroupName]"
+                      length="50"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GroupName]" />
+                    <outputColumn
+                      refId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Output].Columns[ModifiedDate]"
+                      name="ModifiedDate"
+                      lineageId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DepartmentID]"
+                      name="DepartmentID"
+                      dataType="i2" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                      name="Name"
+                      dataType="wstr"
+                      length="50" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GroupName]"
+                      name="GroupName"
+                      dataType="wstr"
+                      length="50" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
+                      name="ModifiedDate"
+                      dataType="dbTimeStamp" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  name="OLE DB Source Error Output"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DepartmentID]"
+                      name="DepartmentID"
+                      lineageId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DepartmentID]"
+                      dataType="i2" />
+                    <outputColumn
+                      refId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Name]"
+                      name="Name"
+                      lineageId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Name]"
+                      length="50"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GroupName]"
+                      name="GroupName"
+                      lineageId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GroupName]"
+                      length="50"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ModifiedDate]"
+                      name="ModifiedDate"
+                      lineageId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp" />
+                    <outputColumn
+                      refId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Insertar Departamento.Paths[OLE DB Source Output]"
+              name="OLE DB Source Output"
+              startId="Package\Insertar Departamento\OLE DB Source.Outputs[OLE DB Source Output]"
+              endId="Package\Insertar Departamento\OLE DB Destination.Inputs[OLE DB Destination Input]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Insertar Empleado"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Insertar Empleado"
+      DTS:DTSID="{419DCF47-F1C9-4912-9CD4-B9475837B764}"
+      DTS:Description="Data Flow Task"
+      DTS:CreationName="SSIS.Pipeline.3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Insertar Empleado\OLE DB Destination"
+              name="OLE DB Destination"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              description="OLE DB Destination"
+              usesDispositions="true"
+              version="4"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset.">[dbo].[DMEMPLEADO]</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  typeConverter="AccessMode">3</property>
+                <property
+                  name="FastLoadKeepIdentity"
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  name="FastLoadKeepNulls"
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  name="FastLoadOptions"
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on.">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  name="FastLoadMaxInsertCommitSize"
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on.">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Insertar Empleado\OLE DB Destination.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.EOH002.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.EOH002.sa]" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Insertar Empleado\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="OLE DB Destination Input"
+                  hasSideEffects="true"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insertar Empleado\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FirstName]"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[FirstName]"
+                      externalMetadataColumnId="Package\Insertar Empleado\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
+                      cachedName="FirstName"
+                      cachedDataType="wstr"
+                      cachedLength="50" />
+                    <inputColumn
+                      refId="Package\Insertar Empleado\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MiddleName]"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[MiddleName]"
+                      externalMetadataColumnId="Package\Insertar Empleado\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MiddleName]"
+                      cachedName="MiddleName"
+                      cachedDataType="wstr"
+                      cachedLength="50" />
+                    <inputColumn
+                      refId="Package\Insertar Empleado\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LastName]"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[LastName]"
+                      externalMetadataColumnId="Package\Insertar Empleado\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
+                      cachedName="LastName"
+                      cachedDataType="wstr"
+                      cachedLength="50" />
+                    <inputColumn
+                      refId="Package\Insertar Empleado\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BusinessEntityID]"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[BusinessEntityID]"
+                      externalMetadataColumnId="Package\Insertar Empleado\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idEmpleado]"
+                      cachedName="BusinessEntityID"
+                      cachedDataType="i4" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Insertar Empleado\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idEmpleado]"
+                      name="idEmpleado"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Empleado\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
+                      name="FirstName"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Empleado\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MiddleName]"
+                      name="MiddleName"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Empleado\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
+                      name="LastName"
+                      dataType="wstr"
+                      length="255" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Insertar Empleado\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  name="OLE DB Destination Error Output"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\Insertar Empleado\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Insertar Empleado\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Insertar Empleado\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insertar Empleado\OLE DB Source"
+              name="OLE DB Source"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              description="OLE DB Source"
+              usesDispositions="true"
+              version="7"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset.">[Person].[Person]</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="SqlCommandVariable"
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  typeConverter="AccessMode">0</property>
+                <property
+                  name="ParameterMapping"
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Insertar Empleado\OLE DB Source.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.AdventureWorks2012.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.AdventureWorks2012.sa]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[BusinessEntityID]"
+                      name="BusinessEntityID"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[BusinessEntityID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BusinessEntityID]" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[PersonType]"
+                      name="PersonType"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[PersonType]"
+                      length="2"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PersonType]" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[NameStyle]"
+                      name="NameStyle"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[NameStyle]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NameStyle]" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[Title]"
+                      name="Title"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[Title]"
+                      length="8"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Title]" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[FirstName]"
+                      name="FirstName"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[FirstName]"
+                      length="50"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FirstName]" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[MiddleName]"
+                      name="MiddleName"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[MiddleName]"
+                      length="50"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MiddleName]" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[LastName]"
+                      name="LastName"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[LastName]"
+                      length="50"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LastName]" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[Suffix]"
+                      name="Suffix"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[Suffix]"
+                      length="10"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Suffix]" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[EmailPromotion]"
+                      name="EmailPromotion"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[EmailPromotion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EmailPromotion]" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[AdditionalContactInfo]"
+                      name="AdditionalContactInfo"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[AdditionalContactInfo]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AdditionalContactInfo]" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[Demographics]"
+                      name="Demographics"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[Demographics]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Demographics]" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[rowguid]"
+                      name="rowguid"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[rowguid]"
+                      dataType="guid"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rowguid]" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[ModifiedDate]"
+                      name="ModifiedDate"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BusinessEntityID]"
+                      name="BusinessEntityID"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PersonType]"
+                      name="PersonType"
+                      dataType="wstr"
+                      length="2" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NameStyle]"
+                      name="NameStyle"
+                      dataType="bool" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Title]"
+                      name="Title"
+                      dataType="wstr"
+                      length="8" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FirstName]"
+                      name="FirstName"
+                      dataType="wstr"
+                      length="50" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MiddleName]"
+                      name="MiddleName"
+                      dataType="wstr"
+                      length="50" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LastName]"
+                      name="LastName"
+                      dataType="wstr"
+                      length="50" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Suffix]"
+                      name="Suffix"
+                      dataType="wstr"
+                      length="10" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EmailPromotion]"
+                      name="EmailPromotion"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AdditionalContactInfo]"
+                      name="AdditionalContactInfo"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Demographics]"
+                      name="Demographics"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rowguid]"
+                      name="rowguid"
+                      dataType="guid" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
+                      name="ModifiedDate"
+                      dataType="dbTimeStamp" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  name="OLE DB Source Error Output"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BusinessEntityID]"
+                      name="BusinessEntityID"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BusinessEntityID]"
+                      dataType="i4" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PersonType]"
+                      name="PersonType"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PersonType]"
+                      length="2"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NameStyle]"
+                      name="NameStyle"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NameStyle]"
+                      dataType="bool" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Title]"
+                      name="Title"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Title]"
+                      length="8"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FirstName]"
+                      name="FirstName"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FirstName]"
+                      length="50"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MiddleName]"
+                      name="MiddleName"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MiddleName]"
+                      length="50"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LastName]"
+                      name="LastName"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LastName]"
+                      length="50"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Suffix]"
+                      name="Suffix"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Suffix]"
+                      length="10"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EmailPromotion]"
+                      name="EmailPromotion"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EmailPromotion]"
+                      dataType="i4" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AdditionalContactInfo]"
+                      name="AdditionalContactInfo"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AdditionalContactInfo]"
+                      dataType="nText" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Demographics]"
+                      name="Demographics"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Demographics]"
+                      dataType="nText" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rowguid]"
+                      name="rowguid"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rowguid]"
+                      dataType="guid" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ModifiedDate]"
+                      name="ModifiedDate"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Insertar Empleado.Paths[OLE DB Source Output]"
+              name="OLE DB Source Output"
+              startId="Package\Insertar Empleado\OLE DB Source.Outputs[OLE DB Source Output]"
+              endId="Package\Insertar Empleado\OLE DB Destination.Inputs[OLE DB Destination Input]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Insertar Sueldo"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Insertar Sueldo"
+      DTS:DTSID="{782A302C-AF1B-4131-B1AA-B75C2AF7B450}"
+      DTS:Description="Data Flow Task"
+      DTS:CreationName="SSIS.Pipeline.3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Insertar Sueldo\OLE DB Destination"
+              name="OLE DB Destination"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              description="OLE DB Destination"
+              usesDispositions="true"
+              version="4"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset.">[dbo].[HSUELDO]</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  typeConverter="AccessMode">3</property>
+                <property
+                  name="FastLoadKeepIdentity"
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  name="FastLoadKeepNulls"
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  name="FastLoadOptions"
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on.">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  name="FastLoadMaxInsertCommitSize"
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on.">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Insertar Sueldo\OLE DB Destination.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.EOH002.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.EOH002.sa]" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Insertar Sueldo\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="OLE DB Destination Input"
+                  hasSideEffects="true"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insertar Sueldo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StartDate]"
+                      lineageId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].Columns[StartDate]"
+                      externalMetadataColumnId="Package\Insertar Sueldo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StartDate]"
+                      cachedName="StartDate"
+                      cachedDataType="dbDate" />
+                    <inputColumn
+                      refId="Package\Insertar Sueldo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Rate]"
+                      lineageId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Rate]"
+                      externalMetadataColumnId="Package\Insertar Sueldo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rate]"
+                      cachedName="Rate"
+                      cachedDataType="cy" />
+                    <inputColumn
+                      refId="Package\Insertar Sueldo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DepartmentID]"
+                      lineageId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DepartmentID]"
+                      externalMetadataColumnId="Package\Insertar Sueldo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idDepartamento]"
+                      cachedName="DepartmentID"
+                      cachedDataType="i2" />
+                    <inputColumn
+                      refId="Package\Insertar Sueldo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BusinessEntityID]"
+                      lineageId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].Columns[BusinessEntityID]"
+                      externalMetadataColumnId="Package\Insertar Sueldo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idEmpleado]"
+                      cachedName="BusinessEntityID"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      refId="Package\Insertar Sueldo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SalesQuota]"
+                      lineageId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].Columns[SalesQuota]"
+                      externalMetadataColumnId="Package\Insertar Sueldo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SalesQuota]"
+                      cachedName="SalesQuota"
+                      cachedDataType="cy" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Insertar Sueldo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idSueldo]"
+                      name="idSueldo"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Sueldo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idEmpleado]"
+                      name="idEmpleado"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Sueldo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idDepartamento]"
+                      name="idDepartamento"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Sueldo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rate]"
+                      name="Rate"
+                      dataType="cy" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Sueldo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SalesQuota]"
+                      name="SalesQuota"
+                      dataType="cy" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Sueldo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StartDate]"
+                      name="StartDate"
+                      dataType="dbDate" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Insertar Sueldo\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  name="OLE DB Destination Error Output"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\Insertar Sueldo\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insertar Sueldo\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Insertar Sueldo\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insertar Sueldo\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Insertar Sueldo\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insertar Sueldo\OLE DB Source"
+              name="OLE DB Source"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              description="OLE DB Source"
+              usesDispositions="true"
+              version="7"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."></property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT        HumanResources.Department.DepartmentID, HumanResources.EmployeeDepartmentHistory.BusinessEntityID, 
+                         HumanResources.EmployeeDepartmentHistory.StartDate, HumanResources.EmployeePayHistory.Rate, Sales.SalesPersonQuotaHistory.SalesQuota
+FROM            HumanResources.Department INNER JOIN
+                         HumanResources.EmployeeDepartmentHistory ON 
+                         HumanResources.Department.DepartmentID = HumanResources.EmployeeDepartmentHistory.DepartmentID INNER JOIN
+                         HumanResources.EmployeePayHistory ON 
+                         HumanResources.EmployeeDepartmentHistory.BusinessEntityID = HumanResources.EmployeePayHistory.BusinessEntityID INNER JOIN
+                         Sales.SalesPersonQuotaHistory ON HumanResources.EmployeeDepartmentHistory.BusinessEntityID = Sales.SalesPersonQuotaHistory.BusinessEntityID</property>
+                <property
+                  name="SqlCommandVariable"
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  typeConverter="AccessMode">2</property>
+                <property
+                  name="ParameterMapping"
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Insertar Sueldo\OLE DB Source.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.AdventureWorks2012.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.AdventureWorks2012.sa]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DepartmentID]"
+                      name="DepartmentID"
+                      lineageId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DepartmentID]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DepartmentID]" />
+                    <outputColumn
+                      refId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].Columns[BusinessEntityID]"
+                      name="BusinessEntityID"
+                      lineageId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].Columns[BusinessEntityID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BusinessEntityID]" />
+                    <outputColumn
+                      refId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].Columns[StartDate]"
+                      name="StartDate"
+                      lineageId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].Columns[StartDate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[StartDate]" />
+                    <outputColumn
+                      refId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Rate]"
+                      name="Rate"
+                      lineageId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Rate]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Rate]" />
+                    <outputColumn
+                      refId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].Columns[SalesQuota]"
+                      name="SalesQuota"
+                      lineageId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].Columns[SalesQuota]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SalesQuota]" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DepartmentID]"
+                      name="DepartmentID"
+                      dataType="i2" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BusinessEntityID]"
+                      name="BusinessEntityID"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[StartDate]"
+                      name="StartDate"
+                      dataType="dbDate" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Rate]"
+                      name="Rate"
+                      dataType="cy" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SalesQuota]"
+                      name="SalesQuota"
+                      dataType="cy" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  name="OLE DB Source Error Output"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DepartmentID]"
+                      name="DepartmentID"
+                      lineageId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DepartmentID]"
+                      dataType="i2" />
+                    <outputColumn
+                      refId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BusinessEntityID]"
+                      name="BusinessEntityID"
+                      lineageId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BusinessEntityID]"
+                      dataType="i4" />
+                    <outputColumn
+                      refId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[StartDate]"
+                      name="StartDate"
+                      lineageId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[StartDate]"
+                      dataType="dbDate" />
+                    <outputColumn
+                      refId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Rate]"
+                      name="Rate"
+                      lineageId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Rate]"
+                      dataType="cy" />
+                    <outputColumn
+                      refId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SalesQuota]"
+                      name="SalesQuota"
+                      lineageId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SalesQuota]"
+                      dataType="cy" />
+                    <outputColumn
+                      refId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Insertar Sueldo.Paths[OLE DB Source Output]"
+              name="OLE DB Source Output"
+              startId="Package\Insertar Sueldo\OLE DB Source.Outputs[OLE DB Source Output]"
+              endId="Package\Insertar Sueldo\OLE DB Destination.Inputs[OLE DB Destination Input]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:From="Package\Eliminar Sueldo"
+      DTS:To="Package\Eliminar Empleado"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:DTSID="{B8188A38-1415-4F32-B7C6-CDF5C9D8150C}"
+      DTS:CreationName="" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:From="Package\Eliminar Sueldo"
+      DTS:To="Package\Eliminar Departamento"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:DTSID="{40A0FCB1-EC6B-4C47-AD27-3DABFC29E024}"
+      DTS:CreationName="" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:From="Package\Eliminar Empleado"
+      DTS:To="Package\Insertar Empleado"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:DTSID="{325103A3-BD36-4CB4-ADB1-FC2717F04213}"
+      DTS:CreationName="" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:From="Package\Eliminar Departamento"
+      DTS:To="Package\Insertar Departamento"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:DTSID="{87D03760-6EE0-46EF-AF35-E979EC0C9F67}"
+      DTS:CreationName="" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
+      DTS:From="Package\Insertar Empleado"
+      DTS:To="Package\Insertar Sueldo"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 7"
+      DTS:DTSID="{174B0A84-FE7A-48A4-A422-500A2AF563BD}"
+      DTS:CreationName="" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 8]"
+      DTS:From="Package\Insertar Departamento"
+      DTS:To="Package\Insertar Sueldo"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 8"
+      DTS:DTSID="{46BBE288-ED98-4DA2-8CD4-D67D749C103A}"
+      DTS:CreationName="" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Eliminar Empleado"
+          TopLeft="55,151" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\Eliminar Departamento"
+          TopLeft="689,175" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Eliminar Sueldo"
+          TopLeft="355,36" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Insertar Empleado"
+          TopLeft="89,277" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\Insertar Departamento"
+          TopLeft="525,284" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Insertar Sueldo"
+          TopLeft="410,394" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="431.5,78">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-293,73"
+              Start="0,0"
+              End="-293,65.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.5"
+                    Point2="0,36.5"
+                    Point3="-4,36.5" />
+                  <mssgle:LineSegment
+                    End="-289,36.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-289,36.5"
+                    Point2="-293,36.5"
+                    Point3="-293,40.5" />
+                  <mssgle:LineSegment
+                    End="-293,65.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="455.666666666667,78">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="327.333333333333,97"
+              Start="0,0"
+              End="327.333333333333,89.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.4023285899095" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.4023285899095"
+                    Point2="0,39.4023285899095"
+                    Point3="4,39.4023285899095" />
+                  <mssgle:LineSegment
+                    End="323.333333333333,39.4023285899095" />
+                  <mssgle:CubicBezierSegment
+                    Point1="323.333333333333,39.4023285899095"
+                    Point2="327.333333333333,39.4023285899095"
+                    Point3="327.333333333333,43.4023285899095" />
+                  <mssgle:LineSegment
+                    End="327.333333333333,89.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="138.5,193">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="34,84"
+              Start="0,0"
+              End="34,76.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38"
+                    Point2="0,42"
+                    Point3="4,42" />
+                  <mssgle:LineSegment
+                    End="30,42" />
+                  <mssgle:CubicBezierSegment
+                    Point1="30,42"
+                    Point2="34,42"
+                    Point3="34,46" />
+                  <mssgle:LineSegment
+                    End="34,76.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="783,217">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-164,67"
+              Start="0,0"
+              End="-164,59.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.5"
+                    Point2="0,33.5"
+                    Point3="-4,33.5" />
+                  <mssgle:LineSegment
+                    End="-160,33.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-160,33.5"
+                    Point2="-164,33.5"
+                    Point3="-164,37.5" />
+                  <mssgle:LineSegment
+                    End="-164,59.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="172.5,319">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="277.5,75"
+              Start="0,0"
+              End="277.5,67.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.1379310344828" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45.1379310344828"
+                    Point2="0,49.1379310344828"
+                    Point3="4,49.1379310344828" />
+                  <mssgle:LineSegment
+                    End="273.5,49.1379310344828" />
+                  <mssgle:CubicBezierSegment
+                    Point1="273.5,49.1379310344828"
+                    Point2="277.5,49.1379310344828"
+                    Point3="277.5,53.1379310344828" />
+                  <mssgle:LineSegment
+                    End="277.5,67.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 8]"
+          TopLeft="619,326">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-109,68"
+              Start="0,0"
+              End="-109,60.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.375" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.375"
+                    Point2="0,40.375"
+                    Point3="-4,40.375" />
+                  <mssgle:LineSegment
+                    End="-105,40.375" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-105,40.375"
+                    Point2="-109,40.375"
+                    Point3="-109,44.375" />
+                  <mssgle:LineSegment
+                    End="-109,60.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Insertar Empleado">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Insertar Empleado\OLE DB Source"
+          TopLeft="56,34" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Insertar Empleado\OLE DB Destination"
+          TopLeft="169,155" />
+        <EdgeLayout
+          Id="Package\Insertar Empleado.Paths[OLE DB Source Output]"
+          TopLeft="131.5,76">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="123.5,79"
+              Start="0,0"
+              End="123.5,71.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.5"
+                    Point2="0,39.5"
+                    Point3="4,39.5" />
+                  <mssgle:LineSegment
+                    End="119.5,39.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="119.5,39.5"
+                    Point2="123.5,39.5"
+                    Point3="123.5,43.5" />
+                  <mssgle:LineSegment
+                    End="123.5,71.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Insertar Departamento">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Insertar Departamento\OLE DB Source"
+          TopLeft="161,58" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Insertar Departamento\OLE DB Destination"
+          TopLeft="121,199" />
+        <EdgeLayout
+          Id="Package\Insertar Departamento.Paths[OLE DB Source Output]"
+          TopLeft="236.5,100">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-29.5,99"
+              Start="0,0"
+              End="-29.5,91.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45.5"
+                    Point2="0,49.5"
+                    Point3="-4,49.5" />
+                  <mssgle:LineSegment
+                    End="-25.5,49.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-25.5,49.5"
+                    Point2="-29.5,49.5"
+                    Point3="-29.5,53.5" />
+                  <mssgle:LineSegment
+                    End="-29.5,91.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Insertar Sueldo">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Insertar Sueldo\OLE DB Source"
+          TopLeft="104,40" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Insertar Sueldo\OLE DB Destination"
+          TopLeft="125,189" />
+        <EdgeLayout
+          Id="Package\Insertar Sueldo.Paths[OLE DB Source Output]"
+          TopLeft="179.5,82">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="31.5,107"
+              Start="0,0"
+              End="31.5,99.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,49.5"
+                    Point2="0,53.5"
+                    Point3="4,53.5" />
+                  <mssgle:LineSegment
+                    End="27.5,53.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="27.5,53.5"
+                    Point2="31.5,53.5"
+                    Point3="31.5,57.5" />
+                  <mssgle:LineSegment
+                    End="31.5,99.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Insertar Empleado\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Insertar Empleado\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Insertar Departamento\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Insertar Departamento\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Insertar Sueldo\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Insertar Sueldo\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

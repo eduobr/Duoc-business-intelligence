@@ -1,0 +1,134 @@
+SELECT pe.FirstName+' '+pe.LastName AS 'Nombre Completo', pro.Name AS 'Nombre Producto',
+sa.SalesLastYear AS 'Monto Total', hu.JobTitle AS 'Cargo'
+FROM Person.Person pe
+JOIN Production.Product pro ON pe.BusinessEntityID=pro.ProductID
+JOIN Sales.SalesPerson sa ON pro.ProductID = sa.TerritoryID
+JOIN HumanResources.Employee hu ON sa.BusinessEntityID=hu.BusinessEntityID
+WHERE sa.SalesLastYear IN (SELECT MAX(sa.SalesLastYear) 
+							FROM Person.Person pe
+							JOIN Production.Product pro ON pe.BusinessEntityID=pro.ProductID
+							JOIN Sales.SalesPerson sa ON pro.ProductID = sa.TerritoryID
+							JOIN HumanResources.Employee hu ON sa.BusinessEntityID=hu.BusinessEntityID)
+
+-----
+SELECT pe.FirstName+' '+pe.LastName AS 'Nombre Completo', pro.Name AS 'Nombre Producto',
+MAX(sa.SalesLastYear) AS 'Monto Total', hu.JobTitle AS 'Cargo'
+FROM Person.Person pe
+JOIN Production.Product pro ON pe.BusinessEntityID=pro.ProductID
+JOIN Sales.SalesPerson sa ON pro.ProductID = sa.TerritoryID
+JOIN HumanResources.Employee hu ON sa.BusinessEntityID=hu.BusinessEntityID
+JOIN Sales.SalesOrderHeader sh ON sa.TerritoryID = sa.TerritoryID
+WHERE sa.SalesLastYear IN (SELECT MAX(sa.SalesLastYear) 
+							FROM Person.Person pe
+							JOIN Production.Product pro ON pe.BusinessEntityID=pro.ProductID
+							JOIN Sales.SalesPerson sa ON pro.ProductID = sa.TerritoryID
+							JOIN HumanResources.Employee hu ON sa.BusinessEntityID=hu.BusinessEntityID)
+							AND (DATEPART(yy, sh.OrderDate) = 2013)
+GROUP BY pe.FirstName+' '+pe.LastName, pro.Name, hu.JobTitle
+--------
+SELECT pe.FirstName+' '+pe.LastName AS 'Nombre Completo', pro.Name AS 'Nombre Producto',
+sa.SalesLastYear AS 'Monto Total', hu.JobTitle AS 'Cargo'
+FROM Person.Person pe
+JOIN Production.Product pro ON pe.BusinessEntityID=pro.ProductID
+JOIN Sales.SalesPerson sa ON pro.ProductID = sa.TerritoryID
+JOIN HumanResources.Employee hu ON sa.BusinessEntityID=hu.BusinessEntityID
+WHERE sa.SalesLastYear = (SELECT MAX(sa.SalesLastYear) 
+							FROM Person.Person pe
+							JOIN Production.Product pro ON pe.BusinessEntityID=pro.ProductID
+							JOIN Sales.SalesPerson sa ON pro.ProductID = sa.TerritoryID
+							JOIN HumanResources.Employee hu ON sa.BusinessEntityID=hu.BusinessEntityID) 
+GO 
+
+
+
+SELECT MAX(sa.SalesLastYear),sh.OrderDate
+							FROM Person.Person pe
+							JOIN Production.Product pro ON pe.BusinessEntityID=pro.ProductID
+							JOIN Sales.SalesPerson sa ON pro.ProductID = sa.TerritoryID
+							JOIN HumanResources.Employee hu ON sa.BusinessEntityID=hu.BusinessEntityID
+							JOIN Sales.SalesOrderHeader sh ON sa.TerritoryID = sa.TerritoryID
+							group by sh.OrderDate
+
+SELECT MAX(sa.SalesLastYear),sh.OrderDate,sh.SalesOrderID
+FROM Person.Person pe
+JOIN Production.Product pro ON pe.BusinessEntityID=pro.ProductID
+JOIN Sales.SalesPerson sa ON pro.ProductID = sa.TerritoryID
+JOIN HumanResources.Employee hu ON sa.BusinessEntityID=hu.BusinessEntityID
+JOIN Sales.SalesOrderHeader sh ON sa.TerritoryID = sa.TerritoryID
+WHERE DATEPART(yy, sh.OrderDate) = 2012
+GROUP BY sh.SalesOrderID,sh.OrderDate
+
+GO
+-------------------------------------------------
+SELECT * FROM Sales.SalesOrderHeader
+SELECT * FROM Sales.SalesPerson
+SELECT * FROM Production.Product
+SELECT * FROM Person.Person
+SELECT * FROM HumanResources.Employee
+SELECT * FROM Sales.SalesOrderDetail
+--Vendedor
+SELECT * FROM Vendedor
+INSERT INTO dbo.Vendedor
+
+SELECT pe.BusinessEntityID,pe.FirstName,pe.LastName,JobTitle FROM Person.Person pe
+JOIN HumanResources.Employee hre ON pe.BusinessEntityID=hre.BusinessEntityID
+WHERE JobTitle = 'Sales Representative'
+
+
+
+SELECT sp.BusinessEntityID,soh.OrderDate FROM Sales.SalesPerson sp
+JOIN Sales.SalesOrderHeader soh ON soh.SalesPersonID = sp.BusinessEntityID 
+ORDER BY sp.BusinessEntityID ASC
+
+
+--Crear Tablas
+CREATE TABLE Tiempo (
+	idTiempo int PRIMARY KEY,
+	fecha DATETIME
+);
+
+CREATE TABLE Vendedor(
+	idVendedor int PRIMARY KEY,
+	nombre Varchar(255),
+	apellido Varchar(255),
+	cargo VARCHAR(255)
+);
+
+CREATE TABLE Producto(
+	idProducto int PRIMARY KEY,
+	nombreProducto VARCHAR(255)
+);
+
+CREATE TABLE Ventas (
+    idVentas int PRIMARY KEY,
+	idTiempo int FOREIGN KEY REFERENCES Tiempo,
+	idVendedor int FOREIGN KEY REFERENCES Vendedor,
+	idProducto int FOREIGN KEY REFERENCES Producto,
+	montoTotal int
+);
+--------------------------------------------------------------------------
+CREATE TABLE DMTiempo (
+	idTiempo int PRIMARY KEY,
+	fecha DATETIME
+);
+
+CREATE TABLE DMVendedor(
+	idVendedor int PRIMARY KEY,
+	nombre Varchar(255),
+	apellido Varchar(255),
+	cargo VARCHAR(255)
+);
+
+
+CREATE TABLE DMVentas (
+    idVentas int PRIMARY KEY,
+	idTiempo int FOREIGN KEY REFERENCES DMTiempo,
+	idVendedor int FOREIGN KEY REFERENCES DMVendedor,
+	montoTotal int
+);
+
+select SalesOrderID, SalesPersonID, TotalDue
+FROM Sales.SalesOrderHeader
+WHERE SalesPersonID IS NOT NULL
+
+DATOS-OBTENER DATOS- OTRAS FUENTES

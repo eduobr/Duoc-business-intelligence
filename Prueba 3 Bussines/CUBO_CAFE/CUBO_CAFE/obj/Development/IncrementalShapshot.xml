@@ -1,0 +1,96 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>CUBO_CAFE</Database>
+    <Server>localhost</Server>
+    <ConnectionString>DataSource=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>ouohpiBj0LIh0lIsaKMYWAXtk20=15-03-2019 10:51:5015-03-2019 10:51:50</TimeStamp>
+        <ID>
+          <String>DW VENTA CAFE</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>K3Td+Y4kXQ09BMzNpQi4ddGz0so=15-03-2019 10:52:5815-03-2019 10:52:57</TimeStamp>
+        <ID>
+          <String>DW VENTA CAFE</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>yY8EagXn9SH8lLpFSS0fF+myi5I=15-03-2019 10:53:1715-03-2019 10:53:17</TimeStamp>
+        <ID>
+          <String>DIM CLIENTE</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>L6ql7eCfAhZNKMFhBsOW91S+D3g=15-03-2019 10:53:1715-03-2019 10:53:17</TimeStamp>
+        <ID>
+          <String>DIM PRODUCTO</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>trOxcrvPFNKCG7SAF7Zyv72Prn4=15-03-2019 10:53:1715-03-2019 10:53:17</TimeStamp>
+        <ID>
+          <String>DIM SUCURSAL</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>iAZwfaWWr5aZ6mRQVB35BBjKN1M=15-03-2019 10:53:1715-03-2019 10:53:17</TimeStamp>
+        <ID>
+          <String>DIM TIEMPO</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>NBxwIE3wmTHiVvGBbgZASkZS4mw=15-03-2019 11:04:0215-03-2019 11:04:02</TimeStamp>
+        <ID>
+          <String>DIM_VENT</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>8iDQNd8KtGQ6YgNqi/TWLiEW2ZY=15-03-2019 11:07:3115-03-2019 11:07:31</TimeStamp>
+        <ID>
+          <String>HECHOS VENTA</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>l+dRp6NWtrdEuSYp5w1Km73aeJU=15-03-2019 11:04:1115-03-2019 10:53:17p3EWGAADmh2pyGQwzO02qzQO2oI=15-03-2019 10:53:1715-03-2019 10:53:17</TimeStamp>
+        <ID>
+          <String>DW VENTA CAFE</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>Q9KMD1tLG2wxUTKiwe/GPtJ/CA8=15-03-2019 10:45:4215-03-2019 10:45:41</TimeStamp>
+      <ID>
+        <String>CUBO_CAFE</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2019-03-15T14:07:37.01Z</LastDeployed>
+</DeploymentSnapshot>
